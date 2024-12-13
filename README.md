@@ -1,6 +1,6 @@
 # Marketplace
 
-  ##  Развёртывание
+  ## Развёртывание
 - Запуск приложения: `docker compose build` и `docker compose up`
 - Создать миграцию:
   `docker compose run backend bash -c "cd marketplace/db && alembic revision --autogenerate"`
