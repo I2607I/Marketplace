@@ -4,9 +4,10 @@
 - docker compose build
 - docker compose up
   Создать миграцию:
-- docker compose run backend bash -c "cd marketplace/db && alembic revision --autogenerate"
-  Применить эту миграцию:
-- docker compose run backend bash -c "cd marketplace/db && alembic upgrade head"
+- Создать миграцию:
+  docker compose run backend bash -c "cd marketplace/db && alembic revision --autogenerate"
+  
+- Применить эту миграцию: docker compose run backend bash -c "cd marketplace/db && alembic upgrade head"
 
   ## Эндпоинты
 
