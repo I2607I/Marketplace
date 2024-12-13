@@ -7,7 +7,7 @@
   
 - Применить эту миграцию: `docker compose run backend bash -c "cd marketplace/db && alembic upgrade head"`
 - Swagger: `http://127.0.0.1:7432/swagger`
-- в файле Marketplace_collection.json находится коллекция для Postman
+- в файле `Marketplace_collection.json` находится коллекция для Postman
 
 ## Эндпоинты
 
