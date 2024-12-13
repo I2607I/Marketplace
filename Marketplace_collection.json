@@ -1,0 +1,440 @@
+{
+	"info": {
+		"_postman_id": "5feb1bff-d611-4f87-8b77-aa931c69dbfb",
+		"name": "Marketplace",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23114076"
+	},
+	"item": [
+		{
+			"name": "GET_ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7432/api/v1/products",
+					"host": [
+						"localhost"
+					],
+					"port": "7432",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7432/api/v1/products/1?currency=RUB",
+					"host": [
+						"localhost"
+					],
+					"port": "7432",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"1"
+					],
+					"query": [
+						{
+							"key": "currency",
+							"value": "RUB"
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7432/api/v1/products/1?currency=USD",
+					"host": [
+						"localhost"
+					],
+					"port": "7432",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"1"
+					],
+					"query": [
+						{
+							"key": "currency",
+							"value": "USD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Смартфон\",\n    \"description\": \"Современный смартфон\",\n    \"price\": 99999.99,\n    \"currency\": \"RUB\",\n    \"category\": \"Электроника\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7432/api/v1/products/",
+					"host": [
+						"localhost"
+					],
+					"port": "7432",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Смартфон 2\",\n    \"description\": \"Не современный смартфон\",\n    \"price\": 555,\n    \"currency\": \"RUB\",\n    \"category\": \"Электроника\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7432/api/v1/products/",
+					"host": [
+						"localhost"
+					],
+					"port": "7432",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Диван\",\n    \"description\": \"Раскладной диван\",\n    \"price\": 1000,\n    \"currency\": \"USD\",\n    \"category\": \"Мебель\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7432/api/v1/products/",
+					"host": [
+						"localhost"
+					],
+					"port": "7432",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Чайник\",\n    \"description\": \"Чайник с подстветкой\",\n    \"price\": 100,\n    \"currency\": \"USD\",\n    \"category\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7432/api/v1/products/",
+					"host": [
+						"localhost"
+					],
+					"port": "7432",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7432/api/v1/products?category=Электроника",
+					"host": [
+						"localhost"
+					],
+					"port": "7432",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Электроника"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7432/api/v1/products?category=Электроника&currency=USD",
+					"host": [
+						"localhost"
+					],
+					"port": "7432",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Электроника"
+						},
+						{
+							"key": "currency",
+							"value": "USD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Холодильник\",\n    \"description\": \"Холодильник с классом энергоэффективности A+\",\n    \"price\": 2000,\n    \"currency\": \"USD\",\n    \"category\": \"Электроника\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7432/api/v1/products/",
+					"host": [
+						"localhost"
+					],
+					"port": "7432",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Холодильник\",\n    \"description\": \"Холодильник с классом энергоэффективности A+++\",\n    \"price\": 2000,\n    \"currency\": \"USD\",\n    \"category\": \"Электроника\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7432/api/v1/products/5/",
+					"host": [
+						"localhost"
+					],
+					"port": "7432",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"5",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7432/api/v1/products/5",
+					"host": [
+						"localhost"
+					],
+					"port": "7432",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:7432/api/v1/products/5",
+					"host": [
+						"localhost"
+					],
+					"port": "7432",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET404",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7432/api/v1/products/1111",
+					"host": [
+						"localhost"
+					],
+					"port": "7432",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"1111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT404",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Холодильник\",\n    \"description\": \"Холодильник с классом энергоэффективности A+++\",\n    \"price\": 2000,\n    \"currency\": \"USD\",\n    \"category\": \"Электроника\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7432/api/v1/products/1111",
+					"host": [
+						"localhost"
+					],
+					"port": "7432",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"1111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE404",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:7432/api/v1/products/1111",
+					"host": [
+						"localhost"
+					],
+					"port": "7432",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"1111"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
