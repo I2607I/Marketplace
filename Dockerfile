@@ -27,6 +27,3 @@ COPY . /app
 
 # Command to run the application
 CMD ["sh", "-c", "python -m marketplace"]
-
-# Command to run the application
-# CMD ["sh", "-c",  "python -m celery -A project.tasks.worker worker --loglevel=info"]
