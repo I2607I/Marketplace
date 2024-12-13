@@ -140,7 +140,6 @@ async def get_products(
     if max_price is None:
         max_price = float(10**30)
     value = await converter()
-    print(value)
     db_products_query = select(Product)
     if currency == 'USD':
         db_products_query = db_products_query.filter(or_(and_(Product.currency == 'RUB', Product.price/value >= min_price), and_(Product.currency == 'USD', Product.price >= min_price)))
@@ -159,7 +158,6 @@ async def get_products(
     db_products = await session.execute(db_products_query)
     db_products = db_products.scalars().all()
     for item in db_products:
-        print(item)
         if item.currency != currency:
             if currency == 'USD':
                 item.price = item.price/value
