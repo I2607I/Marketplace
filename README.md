@@ -8,7 +8,7 @@
 - Применить эту миграцию: `docker compose run backend bash -c "cd marketplace/db && alembic upgrade head"`
 - Swagger: `http://127.0.0.1:7432/swagger`
 
-  ## Эндпоинты
+## Эндпоинты
 
 - **GET** `/api/v1/products` — Список товаров
 - **POST** `/api/v1/products` — Создание товара
